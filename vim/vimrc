@@ -1,0 +1,158 @@
+"Setup Vundle
+filetype off
+set nocompatible
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+"Pull in our bundles
+Bundle 'gmarik/vundle'
+
+"colour schemes
+Bundle 'sjl/badwolf'
+Bundle 'tomasr/molokai'
+
+" Statusline stuff
+Bundle 'bling/vim-airline'
+Bundle 'bling/vim-bufferline'
+
+" Filesystem stuff
+Bundle 'kien/ctrlp.vim'
+
+" Code navigation
+Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'majutsushi/tagbar'
+Bundle 'Raimondi/delimitMate'
+
+" Fancy semantic stuff
+Bundle 'scrooloose/syntastic'
+Bundle 'Valloric/YouCompleteMe'
+
+filetype plugin indent on " filetypes are important!
+
+"TAB settings
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+" use spaces instead of tabs in python
+autocmd FileType python set expandtab
+
+"General settings
+set encoding=utf-8
+set scrolloff=8 " keep a wide margin for scrolling
+set autoindent " smarter indentation
+set showcmd " show me what command i'm typing
+set hidden " hide buffers instead of closing
+set wildmenu
+set wildmode=list:longest
+set noerrorbells " Don't flash crazily
+
+set cursorline " highlight the current line
+set ttyfast " redraw faster
+set ruler " show current line/column
+set backspace=indent,eol,start
+set laststatus=2 " show me the statusline
+
+set number " give me linenumbers
+set relativenumber
+
+set shell=/bin/zsh
+set lazyredraw " only redraw when needed
+set matchtime=1 " Don't hang forever trying to match brackets
+
+"Folds
+set foldmethod=indent
+set foldlevelstart=99
+
+"Change leader key
+let mapleader = ","
+
+set title
+
+"Set dict for spellchecking
+set dictionary=/usr/share/dict/words
+
+set backupskip=/tmp/*,/private/tmp/*
+set mouse=a
+
+"Searching and moving about
+nnoremap / /\v
+set ignorecase " ignore case when searching...
+set smartcase " ...unless we want case-matching
+set nogdefault " match once per line unless otherwise directed
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+
+"Handle wrapping better
+set wrap
+set textwidth=0 " disable horrible \n insertions
+
+set listchars=tab:>\ ,eol:~
+
+"Disable arrow keys for learnings
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+
+"Map : to ;
+nnoremap ; :
+
+au VimResized * :wincmd =
+
+"Completion
+set wildmenu
+set wildmode=list:longest
+set wildignore+=.hg,.git,.svn "Version Controls"
+set wildignore+=*.aux,*.out,*.toc "Latex files"
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg "Images"
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest "Compiled files"
+set wildignore+=*.sw? "Vim swapfiles"
+set wildignore+=*.DS_Store
+set wildignore+=*.pyc
+
+set t_Co=256
+"colorschem badwolf
+colorschem molokai
+set background=dark
+
+"Plugin settings:
+
+"Airline
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_enable_branch=0
+let g:bufferline_echo=0
+set ttimeoutlen=50
+
+"CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+
+"Syntastic
+"let g:syntastic_check_on_open = 1
+let g:syntastic_enable_highlighting = 1
+"let g:syntastic_java_checkers=['javac']
+
+"YCM
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" Buffer navigation
+noremap <C-left> :bprev<CR>
+noremap <C-right> :bnext<CR>
+
+syntax on
+
+"gVIM Settings
+if has('gui_running')
+    "set guifont=Cousine\ 11
+    set guifont=Source\ Code\ Pro\ Semi-Bold\ 10
+    set guioptions=i
+endif
+
