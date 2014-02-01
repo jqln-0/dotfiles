@@ -7,9 +7,10 @@ zshrc
 -----
 
 My zshrc is just the default oh-my-zsh zshrc, with the following changes:
-	- GOPATH set to ~/Programming/Go
-	- My preferred theme set
-	- Some plugins enabled
+
+- GOPATH set to ~/Programming/Go
+- My preferred theme set
+- Some plugins enabled
 
 vimrc
 -----
