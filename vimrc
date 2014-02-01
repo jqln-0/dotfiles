@@ -98,7 +98,7 @@ set wrap
 
 " Highlight trailing whitespace.
 set list
-set listchars=trail:·
+set listchars=trail:·,tab:\ \ 
 
 " -----------------------------------------------------------------------------
 "  Plugin Settings
