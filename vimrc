@@ -6,6 +6,7 @@ set nocompatible
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
+Bundle 'Blackrush/vim-gocode'
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
 Bundle 'gmarik/vundle'
