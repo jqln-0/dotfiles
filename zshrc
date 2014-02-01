@@ -52,6 +52,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl"
 export GOPATH="/home/jacqui/Programming/Go"
+export EDITOR="vim"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
