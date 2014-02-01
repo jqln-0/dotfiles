@@ -1,17 +1,21 @@
 dotfiles
 ========
 
-This is boring. You're probably not that interested.
+A repository for easily moving my dotfiles about and recording changes to them.
 
-zsh
----
+zshrc
+-----
 
-My setup is basically a *very* slightly modified oh-my-zsh. pwd.zsh contains
-simple code to create a fish-style pwd; ie. "~/Documents/Whatever/Somewhere"
-becomes "~/D/W/Somewhere". I found it somewhere on the internet.
+My zshrc is just the default oh-my-zsh zshrc, with the following changes:
+	- GOPATH set to ~/Programming/Go
+	- My preferred theme set
+	- Some plugins enabled
 
-vim
----
+vimrc
+-----
 
-My vimrc is way too long and bloated. Read at your peril.
+My vimrc is probably a fair bit longer than it really needs to be. Possibly I
+will one day get around the cleaning it up and sorting through what I really
+need and don't need. You might find something interesting by browsing through
+it.
 
