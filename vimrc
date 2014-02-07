@@ -93,7 +93,7 @@ set smartcase
 " ------------------------------------------------------------------------
 "  Long Lines & Whitespace
 " ------------------------------------------------------------------------
-set textwidth=80
+set textwidth=0
 set wrap
 
 " Highlight trailing whitespace.
