@@ -104,10 +104,11 @@ set listchars=trail:·,tab:\ \
 "  Plugin Settings
 " ------------------------------------------------------------------------
 " Airline
-let g:airline_enable_branch=0
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:bufferline_echo=0
+let g:airline_theme = 'molokai'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline#extensions#whitespace#enabled = 0
+let g:bufferline_echo = 0
 set ttimeoutlen=50
 
 " CtrlP
@@ -122,7 +123,7 @@ let g:ycm_confirm_extra_conf = 0
 "  GVIM Settings
 " ------------------------------------------------------------------------
 if has('gui_running')
-    set guifont=Source\ Code\ Pro\ Regular\ 10
+		set guifont=DejaVu\ Sans\ Mono\ 10
     set guioptions=i
 endif
 
