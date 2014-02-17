@@ -12,3 +12,6 @@ export TERM="xterm-256color"
 # Golang stuff
 export GOPATH="/home/jacqui/Programming/Go"
 export PATH=$PATH:$GOPATH/bin
+
+# cope
+export PATH=$(cope_path):$PATH
