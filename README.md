@@ -20,3 +20,10 @@ will one day get around the cleaning it up and sorting through what I really
 need and don't need. You might find something interesting by browsing through
 it.
 
+terminator/config
+-----------------
+
+I've configured terminator to look more like a reasonable terminal (ie. no
+crazy red title bar). The config also includes a colour scheme that closely
+matches the vim-molokai colourscheme I use.
+

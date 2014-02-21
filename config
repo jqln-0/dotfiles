@@ -1,0 +1,28 @@
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    palette = "#1b1d1e:#f92672:#82b414:#fd971f:#56c2d6:#8c54fe:#465457:#ccccc6:#505354:#ff5995:#b6e354:#feed6c:#8cedff:#9e6ffe:#899ca1:#f8f8f2"
+    font = DejaVu Sans Mono Book 10
+    visible_bell = True
+    background_image = None
+    background_darkness = 0.9
+    use_system_font = False
+    foreground_color = "#f8f8f2"
+    scroll_on_output = False
+    show_titlebar = False
+    copy_on_selection = True
+    background_color = "#1b1d1e"
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+      size = 660, 390
+[plugins]
