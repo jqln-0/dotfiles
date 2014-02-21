@@ -5,7 +5,6 @@ plugins=(git colored-man history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl"
 export EDITOR="vim"
 export TERM="xterm-256color"
 
