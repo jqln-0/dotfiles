@@ -112,12 +112,19 @@ let g:bufferline_echo = 0
 set ttimeoutlen=50
 
 " CtrlP
-let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_map = '<c-p>'
 
 " YouCompleteMe
 let g:ycm_confirm_extra_conf = 0
 " let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" delimitMate
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+let delimitMate_expand_inside_quotes = 0
+let delimitMate_nesting_quotes = ['"', "'"]
+
 
 " ------------------------------------------------------------------------
 "  GVIM Settings
