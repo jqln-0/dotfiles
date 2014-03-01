@@ -1,5 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="jreese"
+ZSH_THEME="jqln"
 
 plugins=(git colored-man history-substring-search)
 
