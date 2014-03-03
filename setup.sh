@@ -1,10 +1,6 @@
 #!/bin/bash
 INSTALLDIR=$HOME/.dotfiles
 
-# Terminator config
-mkdir -p $HOME/.config/terminator
-ln -sf $INSTALLDIR/terminator/config $HOME/.config/terminator/config
-
 # Vim
 ln -sf $INSTALLDIR/vimrc $HOME/.vimrc
 git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
