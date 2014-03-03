@@ -8,8 +8,11 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="vim"
 export TERM="xterm-256color"
 
-# Golang stuff
-export GOPATH="/home/jacqui/Programming/Go"
+# Development stuff
+export DEVPATH="/home/jacqui/Development"
+export GOPATH=$DEVPATH
+# Ensure the directory is named ~DEVPATH rather than ~GOPATH
+unhash -d GOPATH
 export PATH=$PATH:$GOPATH/bin
 
 # cope
