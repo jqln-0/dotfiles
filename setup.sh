@@ -1,6 +1,10 @@
 #!/bin/bash
 INSTALLDIR=$HOME/.dotfiles
 
+# Lilyterm
+mkdir -p $HOME/.config/lilyterm
+ln -sf $INSTALLDIR/lilyterm/default.conf $HOME/.config/lilyterm/default.conf
+
 # Vim
 ln -sf $INSTALLDIR/vimrc $HOME/.vimrc
 git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
