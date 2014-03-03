@@ -9,13 +9,13 @@ source $ZSH/oh-my-zsh.sh
 alias xdg-open="xdg-open 2>/dev/null"
 
 ## PATH stuff
+export DEVPATH="/home/jacqui/Development"
 export GOPATH=$DEVPATH
 export PATH=$PATH:$DEVPATH/bin
 export PATH=$(cope_path):$PATH
 
 ## Static directory naming
 unhash -d GOPATH
-export DEVPATH="/home/jacqui/Development"
 
 ## Misc env vars
 export EDITOR="vim"
