@@ -130,7 +130,7 @@ let delimitMate_nesting_quotes = ['"', "'"]
 "  GVIM Settings
 " ------------------------------------------------------------------------
 if has('gui_running')
-		set guifont=DejaVu\ Sans\ Mono\ 10
+		set guifont=DejaVu\ Sans\ Mono\ 9
     set guioptions=i
 endif
 
