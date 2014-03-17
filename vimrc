@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'majutsushi/tagbar'
+Bundle "marijnh/tern_for_vim"
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
 " Bundle 'sjl/badwolf'
@@ -49,6 +50,7 @@ set tabstop=2
 
 " Filetype-specific tab settings.
 autocmd FileType python set expandtab
+autocmd FileType javascript set expandtab
 
 " ------------------------------------------------------------------------
 "  Autocompletion
