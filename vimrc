@@ -47,10 +47,14 @@ let mapleader = ","
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
+set expandtab
 
 " Filetype-specific tab settings.
-autocmd FileType python set expandtab
-autocmd FileType javascript set expandtab
+autocmd FileType c set noexpandtab
+autocmd FileType cc set noexpandtab
+autocmd FileType cpp set noexpandtab
+autocmd FileType h set noexpandtab
+autocmd FileType go set noexpandtab
 
 " ------------------------------------------------------------------------
 "  Autocompletion
