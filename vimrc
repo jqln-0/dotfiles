@@ -6,9 +6,9 @@ set nocompatible
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-Bundle 'Blackrush/vim-gocode'
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
+Bundle 'fatih/vim-go'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
@@ -120,6 +120,7 @@ set ttimeoutlen=50
 " CtrlP
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_map = '<c-p>'
+nnoremap <leader>p :CtrlPTag<CR>
 
 " YouCompleteMe
 let g:ycm_confirm_extra_conf = 0
