@@ -55,6 +55,7 @@ autocmd FileType cc set noexpandtab
 autocmd FileType cpp set noexpandtab
 autocmd FileType h set noexpandtab
 autocmd FileType go set noexpandtab
+autocmd FileType make set noexpandtab
 
 " ------------------------------------------------------------------------
 "  Autocompletion
