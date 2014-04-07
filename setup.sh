@@ -18,3 +18,6 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 mkdir -p $HOME/.oh-my-zsh/custom/themes
 ln -sf $INSTALLDIR/jqln.zsh-theme $HOME/.oh-my-zsh/custom/themes/jqln.zsh-theme
 
+# Git
+ln -sd $INSTALLDIR/gitconfig $HOME/.gitconfig
+
