@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'bling/vim-airline'
-Bundle 'bling/vim-bufferline'
+" Bundle 'bling/vim-bufferline'
 Bundle 'fatih/vim-go'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
@@ -18,6 +18,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
 " Bundle 'sjl/badwolf'
 Bundle 'tomasr/molokai'
+Bundle 'tpope/vim-fugitive'
 Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
@@ -114,8 +115,8 @@ set listchars=trail:·,tab:\ \
 let g:airline_theme = 'molokai'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-let g:airline#extensions#whitespace#enabled = 0
-let g:bufferline_echo = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 1
 set ttimeoutlen=50
 
 " CtrlP
