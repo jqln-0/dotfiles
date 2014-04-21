@@ -42,6 +42,9 @@ set dictionary=/usr/share/dict/words
 " Remap leader key.
 let mapleader = ","
 
+" Map jj to esc in insert mode.
+imap jj <Esc>
+
 " ------------------------------------------------------------------------
 "  Tab & Spaces
 " ------------------------------------------------------------------------
