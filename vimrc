@@ -13,7 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'majutsushi/tagbar'
-Bundle "marijnh/tern_for_vim"
+Bundle 'marijnh/tern_for_vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
 " Bundle 'sjl/badwolf'
@@ -54,10 +54,8 @@ set tabstop=2
 set expandtab
 
 " Filetype-specific tab settings.
-autocmd FileType c set noexpandtab
-autocmd FileType cc set noexpandtab
-autocmd FileType cpp set noexpandtab
-autocmd FileType h set noexpandtab
+" The Go setting doesn't really matter since we gofmt on save anyway.
+" Whatever.
 autocmd FileType go set noexpandtab
 autocmd FileType make set noexpandtab
 
