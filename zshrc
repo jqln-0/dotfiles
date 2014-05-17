@@ -12,7 +12,11 @@ alias xdg-open="xdg-open 2>/dev/null"
 export DEVPATH="/home/jacqui/Development"
 export GOPATH=$DEVPATH
 export PATH=$PATH:$DEVPATH/bin
-export PATH=$(cope_path):$PATH
+
+# Add cope only if it's installed.
+if type cope_path > /dev/null; then
+  export PATH=$(cope_path):$PATH
+fi
 
 ## Static directory naming
 unhash -d GOPATH
