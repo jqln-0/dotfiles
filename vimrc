@@ -3,13 +3,13 @@
 " ------------------------------------------------------------------------
 filetype off
 set nocompatible
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Bundle 'bling/vim-airline'
 " Bundle 'bling/vim-bufferline'
 Bundle 'fatih/vim-go'
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'majutsushi/tagbar'
