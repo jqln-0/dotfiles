@@ -80,6 +80,7 @@ syntax on
 
 " Colour scheme
 set t_Co=256
+let g:rehash256 = 1
 colorschem molokai
 set background=dark
 
