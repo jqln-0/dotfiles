@@ -59,6 +59,9 @@ set expandtab
 autocmd FileType go set noexpandtab
 autocmd FileType make set noexpandtab
 
+" When am I ever going to edit a modula2 file?
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+
 " ------------------------------------------------------------------------
 "  Autocompletion
 " ------------------------------------------------------------------------
