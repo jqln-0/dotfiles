@@ -146,5 +146,6 @@ let delimitMate_nesting_quotes = ['"', "'"]
 if has('gui_running')
 		set guifont=DejaVu\ Sans\ Mono\ 9
     set guioptions=i
+    let $GOPATH='$HOME/Development/'
 endif
 
