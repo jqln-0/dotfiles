@@ -4,23 +4,21 @@
 filetype off
 set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 
-Bundle 'bling/vim-airline'
-" Bundle 'bling/vim-bufferline'
-Bundle 'fatih/vim-go'
-Bundle 'gmarik/Vundle.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'majutsushi/tagbar'
-Bundle 'marijnh/tern_for_vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'scrooloose/syntastic'
-" Bundle 'sjl/badwolf'
-Bundle 'tomasr/molokai'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Valloric/YouCompleteMe'
+" Vundle
+Plugin 'gmarik/Vundle.vim'
 
+" Other plugins
+Plugin 'bling/vim-airline'
+Plugin 'fatih/vim-go'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'scrooloose/syntastic'
+Plugin 'tomasr/molokai'
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()
 filetype plugin indent on
 
 " ------------------------------------------------------------------------
