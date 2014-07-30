@@ -33,6 +33,7 @@ set ruler
 set scrolloff=8
 set shell=/bin/zsh
 set title
+set noswapfile
 
 " Spellcheck dictionary.
 set dictionary=/usr/share/dict/words
@@ -42,6 +43,10 @@ let mapleader = ","
 
 " Map jj to esc in insert mode.
 imap jj <Esc>
+
+" Persistent undo.
+set undofile
+set undodir=~/.vim/tmp/undo//
 
 " ------------------------------------------------------------------------
 "  Tab & Spaces
@@ -144,6 +149,6 @@ let delimitMate_nesting_quotes = ['"', "'"]
 if has('gui_running')
 		set guifont=DejaVu\ Sans\ Mono\ 9
     set guioptions=i
-    let $GOPATH='$HOME/Development/'
+    let $GOPATH='~/Development/'
 endif
 
