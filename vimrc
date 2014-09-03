@@ -13,10 +13,11 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
+Plugin 'marijnh/tern_for_vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/syntastic'
-Plugin 'tomasr/molokai'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'w0ng/vim-hybrid'
 
 call vundle#end()
 filetype plugin indent on
@@ -34,9 +35,6 @@ set scrolloff=8
 set shell=/bin/zsh
 set title
 set noswapfile
-
-" Spellcheck dictionary.
-set dictionary=/usr/share/dict/words
 
 " Remap leader key.
 let mapleader = ","
@@ -66,7 +64,7 @@ autocmd FileType make set noexpandtab
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 " ------------------------------------------------------------------------
-"  Autocompletion
+"  Command Autocompletion
 " ------------------------------------------------------------------------
 set wildmenu
 set wildmode=list:longest
@@ -85,9 +83,8 @@ set ttyfast
 syntax on
 
 " Colour scheme
-set t_Co=256
-let g:rehash256 = 1
-colorschem molokai
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid
 set background=dark
 
 " ------------------------------------------------------------------------
@@ -120,11 +117,12 @@ set listchars=trail:·,tab:\ \
 "  Plugin Settings
 " ------------------------------------------------------------------------
 " Airline
-let g:airline_theme = 'molokai'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
+let g:airline_section_b = ''
+let g:airline_section_y = ''
 set ttimeoutlen=50
 
 " CtrlP
@@ -143,12 +141,14 @@ let delimitMate_expand_space = 1
 let delimitMate_expand_inside_quotes = 0
 let delimitMate_nesting_quotes = ['"', "'"]
 
+" Syntastic
+let g:syntastic_javascript_jshint_args = '--config /home/jacqui/.jshintrc'
+
 " ------------------------------------------------------------------------
 "  GVIM Settings
 " ------------------------------------------------------------------------
 if has('gui_running')
-		set guifont=DejaVu\ Sans\ Mono\ 9
+		set guifont=Meslo\ LG\ S\ DZ\ 9
     set guioptions=i
-    let $GOPATH='~/Development/'
 endif
 
