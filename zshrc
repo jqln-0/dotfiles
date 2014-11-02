@@ -22,7 +22,8 @@ if type cope_path > /dev/null; then
 fi
 
 ## Static directory naming
-unhash -d GOPATH
+# TODO: Fix this.
+#unhash -d GOPATH
 
 ## Misc env vars
 export EDITOR="vim"
