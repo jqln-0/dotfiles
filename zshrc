@@ -14,23 +14,7 @@ alias xdg-open="xdg-open 2>/dev/null"
 export DEVPATH="/home/jacqui/Development"
 export GOPATH=$DEVPATH
 export PATH=$PATH:$DEVPATH/bin
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Add cope only if it's installed.
-if type cope_path > /dev/null; then
-  export PATH=$(cope_path):$PATH
-fi
-
-## Static directory naming
-# TODO: Fix this.
-#unhash -d GOPATH
 
 ## Misc env vars
 export EDITOR="vim"
 export TERM="xterm-256color"
-
-# Make swing apps look like not-garbage.
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
-
-# Nicer path for capstone.
-export VirtualJourney=$DEVPATH/src/bitbucket.org/kchu4394/comp3615morrissey_virtual2014/

@@ -3,8 +3,6 @@
 	name = Jacqueline Leykam
 [color]
 	ui = true
-[push]
-	default = simple
 [merge]
 	tool = gvimdiff
 	conflictstyle = diff3

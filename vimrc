@@ -13,7 +13,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
-Plugin 'marijnh/tern_for_vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
@@ -109,6 +108,7 @@ set smartcase
 " ------------------------------------------------------------------------
 set textwidth=0
 set wrap
+set cc=81
 
 " Highlight trailing whitespace.
 set list
@@ -141,9 +141,6 @@ let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 let delimitMate_expand_inside_quotes = 0
 let delimitMate_nesting_quotes = ['"', "'"]
-
-" Syntastic
-let g:syntastic_javascript_jshint_args = '--config /home/jacqui/.jshintrc'
 
 " ------------------------------------------------------------------------
 "  GVIM Settings
