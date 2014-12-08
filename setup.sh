@@ -10,10 +10,6 @@ git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 # Zsh
 ln -sf $INSTALLDIR/zshrc ~/.zshrc
 git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
-# For some reason zsh freaks out and doesn't detect this if I make it a link.
-# TODO: Work out why.
-mkdir -p $HOME/.oh-my-zsh/custom/themes
-ln -sf $INSTALLDIR/jqln.zsh-theme $HOME/.oh-my-zsh/custom/themes/jqln.zsh-theme
 
 # Git
 ln -sd $INSTALLDIR/gitconfig $HOME/.gitconfig
