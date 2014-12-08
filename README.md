@@ -20,10 +20,3 @@ will one day get around the cleaning it up and sorting through what I really
 need and don't need. You might find something interesting by browsing through
 it.
 
-lilyterm
---------
-
-Lilyterm is a really sweet terminal emulator! It doesn't have random unused
-space that pisses me off! My config sets some sane (ie. what I like) defaults,
-as well as the molokai colour scheme.
-
