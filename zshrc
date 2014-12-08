@@ -1,17 +1,11 @@
-source $HOME/.zprofile
-
 ## oh-my-zsh stuff
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="jqln"
+ZSH_THEME="terminalparty"
 plugins=(colored-man history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
-## Aliases
-# Stop GTK apps from spouting garbage.
-alias xdg-open="xdg-open 2>/dev/null"
-
 ## PATH stuff
-export DEVPATH="/home/jacqui/Development"
+export DEVPATH="$HOME/Development"
 export GOPATH=$DEVPATH
 export PATH=$PATH:$DEVPATH/bin
 
