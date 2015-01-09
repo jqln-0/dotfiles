@@ -41,7 +41,6 @@ set breakindent
 set backspace=indent,eol,start
 set encoding=utf-8
 set hidden
-set matchtime=1
 set ruler
 set scrolloff=8
 set shell=/bin/zsh
@@ -55,8 +54,11 @@ let mapleader = ","
 imap jj <Esc>
 
 " Persistent undo.
+if empty(glob("~/.vim/undo/"))
+  execute 'silent !mkdir -p ~/.vim/undo'
+endif
 set undofile
-set undodir=~/.vim/tmp/undo//
+set undodir=~/.vim/undo//
 
 " ------------------------------------------------------------------------
 "  Tab & Spaces
@@ -91,7 +93,8 @@ set noerrorbells
 set number
 set relativenumber
 set showcmd
-set ttyfast
+set showmatch
+set matchtime=1
 syntax on
 
 " Colour scheme
@@ -112,7 +115,6 @@ set hlsearch
 set ignorecase
 set incsearch
 set mouse=a
-set showmatch
 set smartcase
 
 " ------------------------------------------------------------------------
@@ -141,12 +143,10 @@ set ttimeoutlen=50
 " CtrlP
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_map = '<c-p>'
-nnoremap <leader>p :CtrlPTag<CR>
 
 " YouCompleteMe
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_global_ycm_extra_conf = '~/.dotfiles/ycm_extra_conf.py'
-" let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " delimitMate
 let delimitMate_expand_cr = 1
