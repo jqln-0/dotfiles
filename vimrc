@@ -1,25 +1,37 @@
 " ------------------------------------------------------------------------
 "  Plugins
 " ------------------------------------------------------------------------
-filetype off
 set nocompatible
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-" Vundle
-Plugin 'gmarik/Vundle.vim'
+" Bootstrap vim-plug if we don't already have it.
+if empty(glob("~/.vim/autoload/plug.vim"))
+  execute 'silent !mkdir -p ~/.vim/autoload'
+  execute 'silent !curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
 
-" Other plugins
-Plugin 'bling/vim-airline'
-Plugin 'fatih/vim-go'
-Plugin 'kien/ctrlp.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'w0ng/vim-hybrid'
+call plug#begin('~/.vim/plugged')
 
-call vundle#end()
-filetype plugin indent on
+" General plugins.
+Plug 'bling/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'scrooloose/syntastic'
+Plug 'w0ng/vim-hybrid'
+
+" Filetype-specific plugins.
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'marijnh/tern_for_vim', { 'for': 'js' }
+
+" YouCompleteMe requires some special setup.
+function! BuildYCM(info)
+  if a:info.status == 'installed' || a:info.force
+    !./install.sh --clang-completer --system-libclang
+  endif
+endfunction
+
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+
+call plug#end()
 
 " ------------------------------------------------------------------------
 "  General Settings
@@ -141,6 +153,9 @@ let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 let delimitMate_expand_inside_quotes = 0
 let delimitMate_nesting_quotes = ['"', "'"]
+
+" Syntastic
+let g:syntastic_javascript_jshint_args = '--config /home/jacqui/.jshintrc'
 
 " ------------------------------------------------------------------------
 "  GVIM Settings
