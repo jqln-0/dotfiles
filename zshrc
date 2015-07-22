@@ -5,9 +5,7 @@ plugins=(colored-man history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
 ## PATH stuff
-export DEVPATH="$HOME/Development"
-export GOPATH=$DEVPATH
-export PATH=$PATH:$DEVPATH/bin
+export PATH=$HOME/Development/bin:$PATH
 
 ## Misc env vars
 export EDITOR="vim"

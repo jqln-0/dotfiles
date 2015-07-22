@@ -19,13 +19,13 @@ Plug 'scrooloose/syntastic'
 Plug 'w0ng/vim-hybrid'
 
 " Filetype-specific plugins.
-Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'marijnh/tern_for_vim', { 'for': 'js' }
+" Plug 'fatih/vim-go', { 'for': 'go' }
+" Plug 'marijnh/tern_for_vim', { 'for': 'js' }
 
 " YouCompleteMe requires some special setup.
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
-    !./install.sh --clang-completer --system-libclang
+    !./install.sh --clang-completer
   endif
 endfunction
 
