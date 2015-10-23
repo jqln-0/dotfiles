@@ -17,6 +17,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/syntastic'
 Plug 'w0ng/vim-hybrid'
+Plug 'chriskempson/vim-tomorrow-theme'
 
 " Filetype-specific plugins.
 " Plug 'fatih/vim-go', { 'for': 'go' }
@@ -99,8 +100,8 @@ syntax on
 
 " Colour scheme
 let g:hybrid_use_Xresources = 1
-colorscheme hybrid
 set background=dark
+colorscheme Tomorrow-Night
 
 " ------------------------------------------------------------------------
 "  Searching & Moving
@@ -144,6 +145,14 @@ set ttimeoutlen=50
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_map = '<c-p>'
 
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
+
 " YouCompleteMe
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_global_ycm_extra_conf = '~/.dotfiles/ycm_extra_conf.py'
@@ -161,7 +170,7 @@ let g:syntastic_javascript_jshint_args = '--config /home/jacqui/.jshintrc'
 "  GVIM Settings
 " ------------------------------------------------------------------------
 if has('gui_running')
-		set guifont=Meslo\ LG\ S\ DZ\ 9
+		set guifont=Monospace
     set guioptions=i
 endif
 
