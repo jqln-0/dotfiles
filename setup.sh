@@ -3,7 +3,6 @@ INSTALLDIR=$HOME/.dotfiles
 
 # Vim
 ln -sf $INSTALLDIR/vimrc $HOME/.vimrc
-ln -sf $INSTALLDIR/Xresources $HOME/.Xresources
 
 # Zsh
 ln -sf $INSTALLDIR/zshrc ~/.zshrc
