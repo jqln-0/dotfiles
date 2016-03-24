@@ -3,6 +3,9 @@
 # and loads prezto if it's installed.
 #
 
+# Uncomment to profile shell startup if it's opening slower than expected.
+#zmodload zsh/zprof
+
 # No need to break completely if prezto isn't installed.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
