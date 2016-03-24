@@ -27,34 +27,34 @@ zstyle ':prezto:module:prompt' theme 'jacqui'
 
 # syntax-highlighting
 zstyle ':prezto:module:syntax-highlighting' highlighters \
-  'main'  \
-  'brackets' \
+  'main'      \
+  'brackets'  \
   'root'
 
 # By default the syntax highlighting is way too crazy colourful. Redefine most
 # things to unhighlighted so that I can decide which specific things I want
 # colourful.
 zstyle ':prezto:module:syntax-highlighting' styles  \
-  'default'                       ''                \
+  'default'                       'none'            \
   'unknown-token'                 'fg=red,bold'     \
   'reserved-word'                 'fg=magenta,bold' \
-  'alias'                         ''                \
-  'builtin'                       ''                \
-  'function'                      ''                \
-  'command'                       ''                \
-  'precommand'                    ''                \
-  'commandseparator'              ''                \
-  'hashed-command'                ''                \
-  'path'                          ''                \
+  'alias'                         'none'            \
+  'builtin'                       'none'            \
+  'function'                      'none'            \
+  'command'                       'none'            \
+  'precommand'                    'none'            \
+  'commandseparator'              'none'            \
+  'hashed-command'                'none'            \
+  'path'                          'none'            \
   'path_prefix'                   'underline'       \
   'globbing'                      'fg=yellow,bold'  \
-  'history-expansion'             ''                \
-  'single-hyphen-option'          ''                \
-  'double-hyphen-option'          ''                \
-  'back-quoted-argument'          ''                \
+  'history-expansion'             'none'            \
+  'single-hyphen-option'          'none'            \
+  'double-hyphen-option'          'none'            \
+  'back-quoted-argument'          'none'            \
   'single-quoted-argument'        'fg=green,bold'   \
   'double-quoted-argument'        'fg=green,bold'   \
   'dollar-double-quoted-argument' 'fg=yellow,bold'  \
   'back-double-quoted-argument'   'fg=yellow,bold'  \
-  'assign'                        ''
+  'assign'                        'none'
 
