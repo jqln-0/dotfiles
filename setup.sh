@@ -9,6 +9,7 @@ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$H
 ln -sf $INSTALLDIR/zshrc ~/.zshrc
 ln -sf $INSTALLDIR/zpreztorc ~/.zpreztorc
 ln -sf $INSTALLDIR/zlogin ~/.zlogin
+ln -sf $INSTALLDIR/zshenv ~/.zshenv
 ln -sf $INSTALLDIR/prompt_jacqui_setup ~/.zprezto/modules/prompt/functions/prompt_jacqui_setup
 
 # Git
