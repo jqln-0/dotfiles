@@ -13,7 +13,7 @@ ln -sf $INSTALLDIR/zshenv ~/.zshenv
 ln -sf $INSTALLDIR/prompt_jacqui_setup ~/.zprezto/modules/prompt/functions/prompt_jacqui_setup
 
 # Git
-ln -sd $INSTALLDIR/gitconfig $HOME/.gitconfig
+ln -sf $INSTALLDIR/gitconfig $HOME/.gitconfig
 
 # Tmux
 ln -sf $INSTALLDIR/tmux.conf $HOME/.tmux.conf
