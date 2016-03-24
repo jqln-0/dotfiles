@@ -5,6 +5,7 @@ plugins=(colored-man history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
 ## PATH stuff
+export GOPATH=$HOME/Development
 export PATH=$HOME/Development/bin:$PATH
 
 ## Misc env vars
