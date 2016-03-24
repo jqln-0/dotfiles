@@ -6,11 +6,8 @@ A repository for easily moving my dotfiles about and recording changes to them.
 zshrc
 -----
 
-My zshrc is just the default oh-my-zsh zshrc, with the following changes:
-
-- GOPATH set to ~/Programming/Go
-- My preferred theme set
-- Some plugins enabled
+My zshrc is kinda complicated now. I'm using prezto with all kinds of fancy
+syntax highlighting and so on.
 
 vimrc
 -----

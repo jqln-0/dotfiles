@@ -1,13 +1,28 @@
-## oh-my-zsh stuff
-ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="terminalparty"
-plugins=(colored-man history-substring-search)
-source $ZSH/oh-my-zsh.sh
+#
+# Jacqui's .zshrc! Sets up a few handy zsh options, my environment vars
+# and loads prezto if it's installed.
+#
 
-## PATH stuff
+# No need to break completely if prezto isn't installed.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# $PATH customisation
 export GOPATH=$HOME/Development
 export PATH=$HOME/Development/bin:$PATH
 
-## Misc env vars
+# Other environment variables
 export EDITOR="vim"
-export TERM="xterm-256color"
+export TERM="xterm-256color" # gnome-terminal doesn't set this?
+
+setopt GLOB_COMPLETE      # Auto-expand globs
+setopt NO_CASE_GLOB       # Case insensitive globbing
+setopt NUMERIC_GLOB_SORT  # What it says on the tin
+setopt RM_STAR_WAIT       # Delay before rm *
+setopt NO_HUP             # Don't kill backgrounded jobs when closing
+
+# Enable vi-mode with '/' to search history.
+bindkey -v
+bindkey -M vicmd "/" history-incremental-search-backward
+

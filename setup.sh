@@ -5,8 +5,11 @@ INSTALLDIR=$HOME/.dotfiles
 ln -sf $INSTALLDIR/vimrc $HOME/.vimrc
 
 # Zsh
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 ln -sf $INSTALLDIR/zshrc ~/.zshrc
-git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+ln -sf $INSTALLDIR/zpreztorc ~/.zpreztorc
+ln -sf $INSTALLDIR/zlogin ~/.zlogin
+ln -sf $INSTALLDIR/prompt_jacqui_setup ~/.zprezto/modules/prompt/functions/prompt_jacqui_setup
 
 # Git
 ln -sd $INSTALLDIR/gitconfig $HOME/.gitconfig
