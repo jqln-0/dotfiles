@@ -16,6 +16,7 @@ export PATH=$HOME/Development/bin:$PATH
 export EDITOR="vim"
 export TERM="xterm-256color" # gnome-terminal doesn't set this?
 
+# Zsh options
 setopt GLOB_COMPLETE      # Auto-expand globs
 setopt NO_CASE_GLOB       # Case insensitive globbing
 setopt NUMERIC_GLOB_SORT  # What it says on the tin
