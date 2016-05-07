@@ -15,6 +15,10 @@ fi
 export GOPATH=$HOME/Development
 export PATH=$HOME/Development/bin:$PATH
 
+# Set up nvm if needed
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 # Other environment variables
 export EDITOR="vim"
 export TERM="xterm-256color" # gnome-terminal doesn't set this?
