@@ -23,7 +23,6 @@ export TERM="xterm-256color" # gnome-terminal doesn't set this?
 setopt GLOB_COMPLETE      # Auto-expand globs
 setopt NO_CASE_GLOB       # Case insensitive globbing
 setopt NUMERIC_GLOB_SORT  # What it says on the tin
-setopt RM_STAR_WAIT       # Delay before rm *
 setopt NO_HUP             # Don't kill backgrounded jobs when closing
 
 # Enable vi-mode with '/' to search history.
