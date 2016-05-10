@@ -38,7 +38,6 @@ call plug#end()
 "  General Settings
 " ------------------------------------------------------------------------
 set autoindent
-set breakindent
 set backspace=indent,eol,start
 set encoding=utf-8
 set hidden
