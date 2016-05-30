@@ -19,12 +19,14 @@ export PATH=$HOME/Development/bin:$PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+# Fix IntelliJ's issues with ibus
+export IBUS_ENABLE_SYNC_MODE=1
+
 # Other environment variables
 export EDITOR="vim"
 export TERM="xterm-256color" # gnome-terminal doesn't set this?
 
 # Zsh options
-setopt GLOB_COMPLETE      # Auto-expand globs
 setopt NO_CASE_GLOB       # Case insensitive globbing
 setopt NUMERIC_GLOB_SORT  # What it says on the tin
 setopt NO_HUP             # Don't kill backgrounded jobs when closing
