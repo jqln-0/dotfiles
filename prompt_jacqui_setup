@@ -6,10 +6,7 @@
 pmodload 'helper'
 
 function prompt_jacqui_precmd {
-  # Degrade gracefully if for whatever reason the git module isn't around.
-  if (( $+functions[git-info] )); then
-    git-info
-  fi
+  vcs_info
 }
 
 function prompt_jacqui_setup {
@@ -18,21 +15,26 @@ function prompt_jacqui_setup {
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
   prompt_opts=(cr percent subst)
+  
+  autoload -Uz vcs_info
 
   # Set up the precmd to run before each prompt.
   autoload -Uz add-zsh-hook
   add-zsh-hook precmd prompt_jacqui_precmd
 
-  # Set up the git info part of the prompt.
-  # Verbose may slow down the prompt, but it's needed for dirty checks to work
-  # properly.
-  zstyle ':prezto:module:git:info' verbose 'yes'
-  zstyle ':prezto:module:git:info:branch' format '%b'
-  zstyle ':prezto:module:git:info:clean' format ''
-  zstyle ':prezto:module:git:info:dirty' format ' %F{red}⚡%F{yellow}'
-  zstyle ':prezto:module:git:info:keys' format \
-    'prompt' '' \
-    'rprompt' '%F{yellow}(%b%C%D)%f '
+  zstyle ':vcs_info:*' enable hg git
+  zstyle ':vcs_info:(hg*|git*):*' check-for-changes true
+  zstyle ':vcs_info:(hg*|git*):*' stagedstr ''
+  zstyle ':vcs_info:(hg*|git*):*' unstagedstr '✨'
+
+  zstyle ':vcs_info:hg*:*' get-revision true
+  zstyle ':vcs_info:hg*:*' formats '(%b%u)'
+  zstyle ':vcs_info:hg*:*' actionformats '(%F{red}%a%F{yellow})'
+  zstyle ':vcs_info:hg*:*' branchformat '%r'
+  zstyle ':vcs_info:hg*:*' hgrevformat '%h'
+
+  zstyle ':vcs_info:git*:*' formats '(%b%u)'
+  zstyle ':vcs_info:git*:*' actionformats '(%F{red}%a%F{yellow})'
 
   # Displays ' % ', either green or red if the last command succeeded or failed
   # respectively.
@@ -40,7 +42,7 @@ function prompt_jacqui_setup {
   # Displays dir1/dir2 (master) hostname where dir1/dir2 are the parent and
   # current directories respectively, 'master' is the current git branch and
   # hostname is the current hostname. Has lots of fancy colours!
-  RPROMPT='%F{white}%2~%f $git_info[rprompt]%B%F{blue}%m%f%b'
+  RPROMPT='%F{white}%2~%f %F{yellow}${vcs_info_msg_0_}%f %B%F{blue}%m%f%b'  
 }
 
 prompt_jacqui_setup "$@"
