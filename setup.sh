@@ -20,6 +20,6 @@ ln -sf $INSTALLDIR/gitconfig $HOME/.gitconfig
 ln -sf $INSTALLDIR/tmux.conf $HOME/.tmux.conf
 
 # Kitty
-mkdir -p $HOME/.config/kitty/kitty.conf
+mkdir -p $HOME/.config/kitty/
 ln -sf $INSTALLDIR/kitty.conf $HOME/.config/kitty/kitty.conf
 
