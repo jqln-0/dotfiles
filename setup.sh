@@ -3,7 +3,7 @@ INSTALLDIR=$HOME/.dotfiles
 
 # Vim
 ln -sf $INSTALLDIR/vimrc $HOME/.vimrc
-ln -sf $INSTALLDIR/vimrc $HOME/.ideavimrc
+ln -sf $INSTALLDIR/ideavimrc $HOME/.ideavimrc
 
 # Zsh
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
