@@ -12,12 +12,12 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " General plugins.
-Plug 'bling/vim-airline'
+" Plug 'bling/vim-airline'
 Plug 'kien/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/syntastic'
 Plug 'w0ng/vim-hybrid'
-Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'tssm/fairyfloss.vim'
 
 " Filetype-specific plugins.
 " Plug 'fatih/vim-go', { 'for': 'go' }
@@ -98,9 +98,11 @@ set matchtime=1
 syntax on
 
 " Colour scheme
-let g:hybrid_use_Xresources = 1
 set background=dark
-colorscheme Tomorrow-Night
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+colorscheme fairyfloss
 
 " ------------------------------------------------------------------------
 "  Searching & Moving
@@ -132,12 +134,12 @@ set listchars=trail:·,tab:\ \
 "  Plugin Settings
 " ------------------------------------------------------------------------
 " Airline
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 1
-let g:airline_section_b = ''
-let g:airline_section_y = ''
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#show_buffers = 1
+"let g:airline_section_b = ''
+"let g:airline_section_y = ''
 set ttimeoutlen=50
 
 " CtrlP
