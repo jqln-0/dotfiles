@@ -11,26 +11,19 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" General plugins.
-" Plug 'bling/vim-airline'
+" General plugins
 Plug 'kien/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
-Plug 'scrooloose/syntastic'
-Plug 'w0ng/vim-hybrid'
 Plug 'tssm/fairyfloss.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+
+" Airline and themes
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Filetype-specific plugins.
 " Plug 'fatih/vim-go', { 'for': 'go' }
 " Plug 'marijnh/tern_for_vim', { 'for': 'js' }
-
-" YouCompleteMe requires some special setup.
-function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
-    !./install.sh --clang-completer
-  endif
-endfunction
-
-"Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 call plug#end()
 
@@ -136,8 +129,8 @@ set listchars=trail:·,tab:\ \
 " Airline
 "let g:airline_left_sep = ''
 "let g:airline_right_sep = ''
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='fairyfloss'
 "let g:airline_section_b = ''
 "let g:airline_section_y = ''
 set ttimeoutlen=50
@@ -146,26 +139,16 @@ set ttimeoutlen=50
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_map = '<c-p>'
 
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-      \ --ignore .git
-      \ --ignore .svn
-      \ --ignore .hg
-      \ --ignore .DS_Store
-      \ --ignore "**/*.pyc"
-      \ -g ""'
-
-" YouCompleteMe
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_global_ycm_extra_conf = '~/.dotfiles/ycm_extra_conf.py'
-
 " delimitMate
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 let delimitMate_expand_inside_quotes = 0
 let delimitMate_nesting_quotes = ['"', "'"]
 
-" Syntastic
-let g:syntastic_javascript_jshint_args = '--config /home/jacqui/.jshintrc'
+" asyncomplete.vim
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 " ------------------------------------------------------------------------
 "  GVIM Settings
