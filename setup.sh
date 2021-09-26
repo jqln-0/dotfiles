@@ -17,6 +17,7 @@ ln -sf $INSTALLDIR/prompt_jacqui_setup ~/.zprezto/modules/prompt/functions/promp
 ln -sf $INSTALLDIR/gitconfig $HOME/.gitconfig
 
 # Tmux
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 ln -sf $INSTALLDIR/tmux.conf $HOME/.tmux.conf
 
 # Kitty
