@@ -6,3 +6,5 @@
 # Debian by default runs compinit for you in /etc/zsh/zshrc. Prezto will do this
 # for me, so skip the default one to save a little time.
 skip_global_compinit=1
+export MOZ_ENABLE_WAYLAND=1
+TZ='Australia/Sydney'; export TZ
