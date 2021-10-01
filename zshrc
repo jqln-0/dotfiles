@@ -26,6 +26,9 @@ export IBUS_ENABLE_SYNC_MODE=1
 export EDITOR="vim"
 export TERM="xterm-256color" # gnome-terminal doesn't set this?
 
+unset JAVA_HOME
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 # Zsh options
 setopt NO_CASE_GLOB       # Case insensitive globbing
 setopt NUMERIC_GLOB_SORT  # What it says on the tin
