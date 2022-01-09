@@ -25,7 +25,7 @@ function prompt_jacqui_setup {
   zstyle ':vcs_info:*' enable hg git
   zstyle ':vcs_info:(hg*|git*):*' check-for-changes true
   zstyle ':vcs_info:(hg*|git*):*' stagedstr ''
-  zstyle ':vcs_info:(hg*|git*):*' unstagedstr '✨'
+  zstyle ':vcs_info:(hg*|git*):*' unstagedstr '%{✨%G%}'
 
   zstyle ':vcs_info:hg*:*' get-revision true
   zstyle ':vcs_info:hg*:*' formats '(%b%u)'
