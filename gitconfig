@@ -7,7 +7,7 @@
 	tool = vimdiff
 	conflictstyle = diff3
 [push]
-	default = simple
+	default = current
 [core]
 	autocrlf = input
 	excludesfile = /Users/jleykam/.gitignore_global

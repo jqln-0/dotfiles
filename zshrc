@@ -13,7 +13,7 @@ fi
 
 # $PATH customisation
 export GOPATH=$HOME/Development
-export PATH=$HOME/Development/bin:$PATH
+export PATH=$HOME/Development/bin:$HOME/Library/Android/sdk/platform-tools:$PATH
 
 # Set up nvm if needed
 export NVM_DIR="$HOME/.nvm"

@@ -15,7 +15,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tssm/fairyfloss.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
 
 " Airline and themes
 Plug 'vim-airline/vim-airline'
@@ -146,9 +145,9 @@ let delimitMate_expand_inside_quotes = 0
 let delimitMate_nesting_quotes = ['"', "'"]
 
 " asyncomplete.vim
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+"inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 " ------------------------------------------------------------------------
 "  GVIM Settings
