@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')
 " General plugins
 Plug 'kien/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
-Plug 'tssm/fairyfloss.vim'
+Plug 'rakr/vim-one'
 
 " Airline and themes
 Plug 'vim-airline/vim-airline'
@@ -90,11 +90,11 @@ set matchtime=1
 syntax on
 
 " Colour scheme
-set background=dark
+set background=light
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-colorscheme fairyfloss
+colorscheme one
 
 " ------------------------------------------------------------------------
 "  Searching & Moving
@@ -129,7 +129,7 @@ set listchars=trail:·,tab:\ \
 "let g:airline_left_sep = ''
 "let g:airline_right_sep = ''
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='fairyfloss'
+let g:airline_theme='one'
 "let g:airline_section_b = ''
 "let g:airline_section_y = ''
 set ttimeoutlen=50
